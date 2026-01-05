@@ -1,0 +1,8 @@
+---
+- name: Add new k3s agent nodes
+  hosts: k3s_agents
+  gather_facts: true
+  vars_files:
+    vars/main.yml
+  roles:
+    - lxhome.kubernetes.k3s
