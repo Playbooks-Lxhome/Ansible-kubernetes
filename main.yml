@@ -1,8 +1,15 @@
 ---
-- name: Add new k3s agent nodes
-  hosts: k3s_agents
+- name: Kubernetes install
+  hosts: servers
   gather_facts: true
   vars_files:
     vars/main.yml
   roles:
-    - lxhome.kubernetes.k3s
+    # - lxhome.kubernetes.k3s
+    - lxhome.kubernetes.k8s
+
+
+# ansible-playbook -i inventory_k8s.ini main.yml -t k8s_full_install
+
+
+
