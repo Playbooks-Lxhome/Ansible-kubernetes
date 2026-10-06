@@ -10,6 +10,3 @@
 
 
 # ansible-playbook -i inventory_k8s.ini main.yml -t k8s_full_install
-
-
-
